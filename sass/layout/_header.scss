@@ -1,8 +1,10 @@
 /* Header ---------------*/
-header #logo,
-header nav {
-	text-align: center;
+header {
+	#logo, nav {
+		@extend %centered;
+	}
 }
+
 
 /* Navigation ---------------*/
 nav#main-nav ul {
@@ -14,19 +16,21 @@ nav#main-nav ul li {
 	margin-bottom: 5px;
 }
 
-nav a {
-	text-decoration: none;
-	text-transform: uppercase;
-	font-weight: 700;
-	color: #4a4a4a;
-	padding: 10px 15px;
-	background-color: #fff;
-	display: block; 
-}
+nav {
+	a {
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: 700;
+		color: #4a4a4a;
+		padding: 10px 15px;
+		background-color: #fff;
+		display: block; 
+	}
 
-nav a:hover {
-	background-color: #252525;
-	color: #fff;
+	a:hover {
+		background-color: #252525;
+		color: #fff;
+	}
 }
 
 /* Media Queries ---------*/

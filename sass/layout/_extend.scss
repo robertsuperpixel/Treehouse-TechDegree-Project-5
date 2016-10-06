@@ -1,0 +1,24 @@
+/* Extenders ---------------*/
+
+//Center text
+%centered {
+	text-align: center;
+}
+
+//Sections Top and Bottom Padding
+%sectionpadding {
+	padding-top: 6%;
+	padding-bottom: 6%;
+}
+
+//Sections Outer Padding
+%outerpadding {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+//Remove padding and margins
+%paddingmarginzero {
+	padding: 0;
+	margin: 0;
+}

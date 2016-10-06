@@ -1,15 +1,16 @@
+/* Main Colours ---------*/
+/* Font Families ---------*/
+/* Font Sizes ----------*/
+/* Media Query Break Points ----------*/
 /* Global Styling ---------------*/
-/* line 2, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/base/_base.scss */
 * {
   box-sizing: border-box;
 }
 
-/* line 6, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/base/_base.scss */
 body {
   background-color: #fafafa;
 }
 
-/* line 10, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/base/_base.scss */
 img {
   max-width: 100%;
   height: auto;
@@ -18,34 +19,49 @@ img {
 }
 
 /* Clearfix ---------------*/
-/* line 18, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/base/_base.scss */
 .clearfix::after {
   content: '';
   display: table;
   clear: both;
 }
 
-/* Header ---------------*/
-/* line 2, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/layout/_header.scss */
-header #logo,
-header nav {
+/* Extenders ---------------*/
+header #logo, header nav, section, #sub-footer, section#portfolio h2,
+section#portfolio h3,
+section#portfolio p, footer#contact h4,
+footer#contact p {
   text-align: center;
 }
 
+section {
+  padding-top: 6%;
+  padding-bottom: 6%;
+}
+
+#main-nav,
+#bio,
+#contact {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  padding: 0;
+  margin: 0;
+}
+
+/* Header ---------------*/
 /* Navigation ---------------*/
-/* line 8, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/layout/_header.scss */
 nav#main-nav ul {
   padding: 0;
   margin: 0;
 }
 
-/* line 12, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/layout/_header.scss */
 nav#main-nav ul li {
   list-style: none;
   margin-bottom: 5px;
 }
 
-/* line 17, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/layout/_header.scss */
 nav a {
   text-decoration: none;
   text-transform: uppercase;
@@ -56,7 +72,6 @@ nav a {
   display: block;
 }
 
-/* line 27, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/layout/_header.scss */
 nav a:hover {
   background-color: #252525;
   color: #fff;
@@ -65,11 +80,9 @@ nav a:hover {
 /* Media Queries ---------*/
 @media screen and (min-width: 768px) {
   /* Navigation ---------------*/
-  /* line 35, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/layout/_header.scss */
   nav#main-nav ul li {
     display: inline-block;
   }
-  /* line 39, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/layout/_header.scss */
   nav a {
     background-color: transparent;
     padding: 10px 25px;
@@ -78,48 +91,40 @@ nav a:hover {
 
 @media screen and (min-width: 1024px) {
   /* Navigation ---------------*/
-  /* line 47, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/layout/_header.scss */
   #logo {
     float: left;
   }
-  /* line 50, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/layout/_header.scss */
   nav#main-nav {
     float: right;
   }
-  /* line 54, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/layout/_header.scss */
   nav#main-nav ul li {
     display: inline-block;
   }
-  /* line 58, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/layout/_header.scss */
   nav a {
     padding: 10px 15px;
   }
 }
 
 /* Layouts ---------*/
-/* line 2, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/layout/_layout.scss */
 .main-wrapper {
   max-width: 960px;
   margin: 0 auto;
   padding: 6% 0;
 }
 
-/* line 8, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/layout/_layout.scss */
-#main-nav,
-#bio,
-#contact {
-  padding-left: 15px;
-  padding-right: 15px;
+@media (min-width: 1024px) {
+  .main-wrapper {
+    padding: 50px 0;
+  }
 }
 
-/* line 15, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/layout/_layout.scss */
-section {
-  padding-top: 6%;
-  padding-bottom: 6%;
-  text-align: center;
+@media (min-width: 1024px) {
+  section {
+    padding-top: 35px;
+    padding-bottom: 35px;
+  }
 }
 
-/* line 21, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/layout/_layout.scss */
 .flex-container {
   display: -ms-flexbox;
   display: flex;
@@ -130,22 +135,33 @@ section {
 }
 
 /* Columns ---------*/
-/* line 31, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/layout/_layout.scss */
 .col_6,
 .col_4 {
   padding-left: 1%;
   padding-right: 1%;
 }
 
+@media (min-width: 768px) {
+  .col_4 {
+    width: 50%;
+    float: left;
+  }
+}
+
+@media (min-width: 1024px) {
+  .col_4 {
+    width: 33.333333%;
+    float: left;
+  }
+}
+
 /* Sections - Bio ---------*/
-/* line 38, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/layout/_layout.scss */
 .profile-img {
   margin-bottom: 25px;
   width: 75%;
 }
 
 /* Sections - Portfolio ---------*/
-/* line 44, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/layout/_layout.scss */
 section#portfolio {
   background-color: #fff;
   padding: 20px 10px;
@@ -154,56 +170,74 @@ section#portfolio {
 /* Media Queries ---------*/
 @media screen and (min-width: 768px) {
   /* Columns ---------------*/
-  /* line 52, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/layout/_layout.scss */
   section#bio .col_6:nth-child(1) {
     width: 60%;
     float: left;
   }
-  /* line 57, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/layout/_layout.scss */
   section#bio .col_6:nth-child(2) {
     width: 40%;
     float: left;
   }
-  /* line 62, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/layout/_layout.scss */
-  .col_4 {
-    width: 50%;
-    float: left;
-  }
   /* Layout ---------------*/
-  /* line 68, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/layout/_layout.scss */
   .flex-container {
     display: block;
   }
   /* Sections ---------------*/
-  /* line 73, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/layout/_layout.scss */
   section#bio p {
     text-align: left;
   }
-  /* line 77, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/layout/_layout.scss */
   .profile-img {
     width: 100%;
   }
 }
 
-@media screen and (min-width: 1024px) {
-  /* Layouts ---------*/
-  /* line 84, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/layout/_layout.scss */
-  .main-wrapper {
-    padding: 50px 0;
-  }
-  /* Columns ---------------*/
-  /* line 89, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/layout/_layout.scss */
-  .col_4 {
-    width: 33.333333%;
-    float: left;
-  }
-  /* Sections ---------------*/
-  /* line 95, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/layout/_layout.scss */
-  section {
-    padding-top: 35px;
-    padding-bottom: 35px;
-  }
-  /* line 100, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/layout/_layout.scss */
+/* Footer ---------------*/
+footer {
+  padding: 20px 10px 0;
+}
+
+#sub-footer {
+  border-top: 1px solid #dedede;
+  padding-top: 20px;
+}
+
+/* Typography ---------*/
+body {
+  font-family: "Open Sans", arial, sans-serif;
+  font-size: 16px;
+  color: #7f7f7f;
+  font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #4a4a4a;
+}
+
+#logo h1 {
+  margin-bottom: 30px;
+}
+
+section#portfolio h2 {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+section#portfolio h3 {
+  padding-bottom: 20px;
+}
+
+section#portfolio p,
+section#portfolio img {
+  padding-bottom: 30px;
+}
+
+section#portfolio h3,
+section#portfolio p {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+@media (min-width: 1024px) {
   section#portfolio h3,
   section#portfolio p {
     padding-left: 5%;
@@ -211,94 +245,19 @@ section#portfolio {
   }
 }
 
-/* Footer ---------------*/
-/* line 2, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/layout/_footer.scss */
-footer {
-  padding: 20px 10px 0;
-}
-
-/* line 6, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/layout/_footer.scss */
-#sub-footer {
-  border-top: 1px solid #dedede;
-  padding-top: 20px;
-  text-align: center;
-}
-
-/* Typography ---------*/
-/* line 2, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/components/_typography.scss */
-body {
-  font-family: 'Open Sans', arial, sans-serif;
-  font-size: 16px;
-  color: #7f7f7f;
-  font-weight: 400;
-}
-
-/* line 9, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/components/_typography.scss */
-h1, h2, h3, h4, h5, h6 {
-  color: #4a4a4a;
-  padding: 0;
-  margin: 0;
-}
-
-/* line 15, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/components/_typography.scss */
-p {
-  margin: 0;
-  padding: 0;
-}
-
-/* line 20, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/components/_typography.scss */
-#logo h1 {
-  margin-bottom: 30px;
-}
-
-/* line 24, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/components/_typography.scss */
-section#portfolio h2 {
-  margin-top: 30px;
-  margin-bottom: 50px;
-}
-
-/* line 29, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/components/_typography.scss */
-section#portfolio h2,
-section#portfolio h3,
-section#portfolio p {
-  text-align: center;
-}
-
-/* line 36, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/components/_typography.scss */
-section#portfolio h3 {
-  padding-bottom: 20px;
-}
-
-/* line 40, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/components/_typography.scss */
-section#portfolio p,
-section#portfolio img {
-  padding-bottom: 30px;
-}
-
-/* line 45, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/components/_typography.scss */
-section#portfolio h3,
-section#portfolio p {
-  padding-left: 15%;
-  padding-right: 15%;
-}
-
-/* line 51, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/components/_typography.scss */
 section#portfolio h3 {
   font-size: 1.3rem;
   font-weight: 700;
 }
 
-/* line 56, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/components/_typography.scss */
 footer a {
   color: #7f7f7f;
 }
 
-/* line 60, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/components/_typography.scss */
 footer a:hover {
   color: #252525;
 }
 
-/* line 64, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/components/_typography.scss */
 footer#contact h4 {
   font-size: 1.2rem;
   font-weight: 700;
@@ -306,34 +265,26 @@ footer#contact h4 {
   margin-bottom: 30px;
 }
 
-/* line 71, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/components/_typography.scss */
 footer#contact h4,
 footer#contact p {
-  text-align: center;
   padding-left: 10%;
   padding-right: 10%;
 }
 
-/* line 78, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/components/_typography.scss */
 footer#contact p.contact-info {
   margin-bottom: 25px;
 }
 
-/* line 82, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/components/_typography.scss */
 footer#contact p.contact-details {
   margin-bottom: 15px;
 }
 
-/* line 86, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/components/_typography.scss */
 footer#contact p.contact-details span {
   font-weight: bold;
 }
 
-/* line 90, C:/Program Files/wamp/www/courses/treehouse/front-end-web/projects/project-5/sass/components/_typography.scss */
 #sub-footer a {
   text-decoration: none;
   font-weight: bolder;
   font-size: 1.1rem;
 }
-
-/*# sourceMappingURL=../css/styles.map */

@@ -1,20 +1,18 @@
 /* Typography ---------*/
 body {
-	font-family: 'Open Sans', arial, sans-serif;
-	font-size: 16px;
-	color: #7f7f7f;
+	font-family: $defaultfont;
+	font-size: $defaultsize;
+	color: $lightgrey;
 	font-weight: 400;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	color: #4a4a4a;
-	padding: 0;
-	margin: 0;
+	color: $headingblk;
+	@extend %paddingmarginzero;
 }
 
 p {
-	margin: 0;
-	padding: 0;
+	@extend %paddingmarginzero;
 }
 
 #logo h1 {
@@ -29,9 +27,8 @@ section#portfolio h2 {
 section#portfolio h2,
 section#portfolio h3,
 section#portfolio p {
-	text-align: center;
+	@extend %centered;
 }
-
 
 section#portfolio h3 {
 	padding-bottom: 20px;
@@ -46,6 +43,11 @@ section#portfolio h3,
 section#portfolio p {
 	padding-left: 15%;
 	padding-right: 15%;
+
+	@media #{$brk-tablet-landscape} {
+		padding-left: 5%;
+		padding-right: 5%;
+	}
 }
 
 section#portfolio h3 {
@@ -54,11 +56,11 @@ section#portfolio h3 {
 }
 
 footer a {
-	color: #7f7f7f; 
+	color: $lightgrey; 
 }
 
 footer a:hover {
-	color: #252525; 
+	color: $darkgrey; 
 }
 
 footer#contact h4 {
@@ -70,7 +72,7 @@ footer#contact h4 {
 
 footer#contact h4,
 footer#contact p {
-	text-align: center;
+	@extend %centered;
 	padding-left: 10%;
 	padding-right: 10%;
 }
@@ -92,3 +94,5 @@ footer#contact p.contact-details span {
 	font-weight: bolder;
 	font-size: 1.1rem;
 }
+
+

@@ -3,19 +3,26 @@
 	max-width: 960px;
 	margin: 0 auto;
 	padding: 6% 0;
+
+	@media #{$brk-tablet-landscape} {
+		padding: 50px 0;
+	}
 }
 
 #main-nav,
 #bio,
 #contact {
-	padding-left: 15px;
-	padding-right: 15px;
+	@extend %outerpadding;
 }
 
 section {
-	padding-top: 6%;
-	padding-bottom: 6%;
-	text-align: center;
+	@extend %sectionpadding;
+	@extend %centered;
+
+	@media #{$brk-tablet-landscape} {
+		padding-top: 35px;
+		padding-bottom: 35px;
+	}
 }
 
 .flex-container {
@@ -32,6 +39,16 @@ section {
 .col_4 {
 	padding-left: 1%;
 	padding-right: 1%;
+}
+.col_4 {
+@media #{$brk-tablet-portrait} {
+		width: 50%;
+		float: left;
+	}
+@media #{$brk-tablet-landscape} {
+		width: 33.333333%;
+		float: left;
+	}
 }
 
 /* Sections - Bio ---------*/
@@ -59,11 +76,6 @@ section#portfolio {
 		float: left;
 	}
 
-	.col_4 {
-		width: 50%;
-		float: left;
-	}
-
 	/* Layout ---------------*/
 	.flex-container {
 		display: block;
@@ -76,30 +88,5 @@ section#portfolio {
 
 	.profile-img {
 		width: 100%;
-	}
-}
-
-@media screen and (min-width: 1024px) {
-	/* Layouts ---------*/
-	.main-wrapper {
-		padding: 50px 0;
-	}
-
-	/* Columns ---------------*/
-	.col_4 {
-		width: 33.333333%;
-		float: left;
-	}
-
-	/* Sections ---------------*/
-	section {
-		padding-top: 35px;
-		padding-bottom: 35px;
-	}
-
-	section#portfolio h3,
-	section#portfolio p {
-		padding-left: 5%;
-		padding-right: 5%;
 	}
 }
