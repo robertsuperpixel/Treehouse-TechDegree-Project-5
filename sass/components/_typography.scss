@@ -1,0 +1,94 @@
+/* Typography ---------*/
+body {
+	font-family: 'Open Sans', arial, sans-serif;
+	font-size: 16px;
+	color: #7f7f7f;
+	font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color: #4a4a4a;
+	padding: 0;
+	margin: 0;
+}
+
+p {
+	margin: 0;
+	padding: 0;
+}
+
+#logo h1 {
+	margin-bottom: 30px; 
+}
+
+section#portfolio h2 {
+	margin-top: 30px;
+	margin-bottom: 50px;
+}
+
+section#portfolio h2,
+section#portfolio h3,
+section#portfolio p {
+	text-align: center;
+}
+
+
+section#portfolio h3 {
+	padding-bottom: 20px;
+}
+
+section#portfolio p,
+section#portfolio img {
+	padding-bottom: 30px;
+}
+
+section#portfolio h3,
+section#portfolio p {
+	padding-left: 15%;
+	padding-right: 15%;
+}
+
+section#portfolio h3 {
+	font-size: 1.3rem;
+	font-weight: 700;
+}
+
+footer a {
+	color: #7f7f7f; 
+}
+
+footer a:hover {
+	color: #252525; 
+}
+
+footer#contact h4 {
+	font-size: 1.2rem;
+	font-weight: 700;
+	margin-top: 10px;
+	margin-bottom: 30px;
+}
+
+footer#contact h4,
+footer#contact p {
+	text-align: center;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+footer#contact p.contact-info {
+	margin-bottom: 25px;
+}
+
+footer#contact p.contact-details {
+	margin-bottom: 15px;
+}
+
+footer#contact p.contact-details span {
+	font-weight: bold;
+}
+
+#sub-footer a {
+	text-decoration: none;
+	font-weight: bolder;
+	font-size: 1.1rem;
+}

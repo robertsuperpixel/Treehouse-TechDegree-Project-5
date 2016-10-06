@@ -1,0 +1,105 @@
+/* Layouts ---------*/
+.main-wrapper {
+	max-width: 960px;
+	margin: 0 auto;
+	padding: 6% 0;
+}
+
+#main-nav,
+#bio,
+#contact {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+section {
+	padding-top: 6%;
+	padding-bottom: 6%;
+	text-align: center;
+}
+
+.flex-container {
+	display: -ms-flexbox;
+	display: flex;
+	display: -webkit-flex;
+	-ms-flex-direction: column-reverse;
+	    flex-direction: column-reverse;
+	-webkit-flex-direction: column-reverse;
+}
+
+/* Columns ---------*/
+.col_6,
+.col_4 {
+	padding-left: 1%;
+	padding-right: 1%;
+}
+
+/* Sections - Bio ---------*/
+.profile-img {
+	margin-bottom: 25px;
+	width: 75%;
+}
+
+/* Sections - Portfolio ---------*/
+section#portfolio {
+	background-color: #fff;
+	padding: 20px 10px;
+}
+
+/* Media Queries ---------*/
+@media screen and (min-width: 768px) {
+	/* Columns ---------------*/
+	section#bio .col_6:nth-child(1){
+		width: 60%;
+		float: left;
+	}
+
+	section#bio .col_6:nth-child(2){
+		width: 40%;
+		float: left;
+	}
+
+	.col_4 {
+		width: 50%;
+		float: left;
+	}
+
+	/* Layout ---------------*/
+	.flex-container {
+		display: block;
+	}
+
+	/* Sections ---------------*/
+	section#bio p {
+		text-align: left;
+	}
+
+	.profile-img {
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 1024px) {
+	/* Layouts ---------*/
+	.main-wrapper {
+		padding: 50px 0;
+	}
+
+	/* Columns ---------------*/
+	.col_4 {
+		width: 33.333333%;
+		float: left;
+	}
+
+	/* Sections ---------------*/
+	section {
+		padding-top: 35px;
+		padding-bottom: 35px;
+	}
+
+	section#portfolio h3,
+	section#portfolio p {
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+}
